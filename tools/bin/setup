@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./tools/bin/load_mysql_dump
+
+pip install -r requirements.txt

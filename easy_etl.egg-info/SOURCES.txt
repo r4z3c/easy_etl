@@ -1,0 +1,8 @@
+easy_etl/__init__.py
+easy_etl/full_test.py
+easy_etl.egg-info/PKG-INFO
+easy_etl.egg-info/SOURCES.txt
+easy_etl.egg-info/dependency_links.txt
+easy_etl.egg-info/not-zip-safe
+easy_etl.egg-info/requires.txt
+easy_etl.egg-info/top_level.txt

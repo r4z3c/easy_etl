@@ -1,0 +1,20 @@
+FROM jupyter/pyspark-notebook
+
+LABEL maintainer="r4z3c <cezar.almeidajr@gmail.com>"
+
+USER root
+
+RUN apt update -y
+RUN apt install -y iputils-ping sudo mysql-client
+RUN echo "jovyan ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers
+
+ENV SPARK_CONF $SPARK_HOME/conf/spark-defaults.conf
+
+RUN cp $SPARK_CONF.template $SPARK_CONF
+RUN echo "spark.jars.packages com.amazonaws:aws-java-sdk:1.7.4,org.apache.hadoop:hadoop-aws:2.7.2,mysql:mysql-connector-java:5.1.45" >> $SPARK_CONF
+
+ENV APP_PATH /app/
+
+USER jovyan
+
+WORKDIR $APP_PATH

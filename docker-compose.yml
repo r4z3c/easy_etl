@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  pyspark:
+    build:
+      context: .
+      dockerfile: ./tools/dockerfiles/pyspark
+    ports:
+      - 8888:8888
+    volumes:
+      - .:/app
+    command: bash -c "./tools/bin/setup && jupyter notebook"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+    ports:
+      - 3306:3306
+
+networks:
+  default:
+    external:
+      name: etl
