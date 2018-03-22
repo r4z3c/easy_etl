@@ -1,2 +1,3 @@
 *.pyc
 /.idea/*
+/easy_etl.egg-info/*
