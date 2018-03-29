@@ -2,3 +2,4 @@ pytest==3.4.2
 envparse==0.2.0
 simple-settings==0.12.1
 pprint==0.1
+ipyparallel==6.1.1

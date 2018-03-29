@@ -1,9 +1,12 @@
-from .db.config import DbConfig
-from .db.source import DbSource
+from .paths import Paths
+# from easy_etl.shared.utils import OsUtil
+# from .db import DbConfig, DbSource
+# from .jobs import BaseJob
+# from .extractions import BaseExtraction
+# from .transformers import BaseTransformer
+# from .loaders import BaseLoader, S3Loader
 
-from .base.job import BaseJob
-from .base.extractor import BaseExtractor
-from .base.transformer import BaseTransformer
-from .base.loader import BaseLoader
 
-from .loader.s3 import S3Loader
+class EEtl(Paths):
+    def __init__(self):
+        pass

@@ -1,3 +1,7 @@
 *.pyc
 /.idea/*
 /easy_etl.egg-info/*
+/docker-compose.yml
+/docker-compose.yml.example
+/resources/*
+__pycache__
